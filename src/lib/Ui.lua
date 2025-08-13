@@ -292,21 +292,6 @@ function Ui:ShowModal(Lines: table)
 	})
 end
 
-function Ui:ShowUnsupportedExecutor(Name: string)
-	Ui:ShowModal({
-		"Unfortunately Sigma Spy is not supported on your executor",
-		"The best free option is Swift (discord.gg/getswiftgg)",
-		`\nYour executor: {Name}`
-	})
-end
-
-function Ui:ShowUnsupported(FuncName: string)
-	Ui:ShowModal({
-		"Unfortunately Sigma Spy is not supported on your executor",
-		`\nMissing function: {FuncName}`
-	})
-end
-
 function Ui:CreateOptionsForDict(Parent, Dict: table, Callback)
 	local Options = {}
 
@@ -1423,5 +1408,6 @@ function Ui:CreateLog(Data: Log)
 		self:SetFocusedRemote(Data)
 	end
 end
+
 
 return Ui
